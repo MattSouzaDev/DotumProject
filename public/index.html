@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="./main.css" />
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <title>Controle de Contas</title>
+</head>
+
+<body>
+  <br>
+  <h1>Controle de contas</h1>
+  <form class="conta-form">
+    <h4>Adicione suas contas</h4>
+    
+    <div class="form-control">
+      <label for="name"> Descrição: </label>
+      <input type="text" name="name" class="conta-name" placeholder="Ex: Aluguel" required/>
+    </div>
+
+    <div class="form-control">
+      <label for="value"> Valor: &nbsp;</label>
+      <input type="number" name="value" class="conta-value" required type="number"/>
+    </div>
+    
+    <div class="form-control">
+      <label for="pending">Pendente: </label>
+      <input type="checkbox" name="pending" class="pending" />
+    </div>
+
+    <div class="form-control">
+      <label for="date">Vencimento: </label>
+      <input type="date" name="date" class="conta-date" required type="date"/>
+    </div>
+
+    <button type="submit" class="btn submit-btn">Adicionar</button>
+
+    <div class="form-alert"></div>
+  </form>
+
+  <section class="contas-container">
+    <p class="loading-text">Carregando...</p>
+    
+  
+    <section class="list-container">
+      <h4>Contas Pendentes</h4>
+      <p class="totalPagar"></p>
+      <div class="list"></div>
+    </section>
+
+    <section class="list-container">
+      <h4>Contas A Receber</h4>
+      <p class="totalRec"></p>
+      <div class="list1"></div>
+    </section>
+
+    <section class="list-container"></section>
+    <h4>Total de contas</h4>
+    <p class="total"></p>
+      <div class="list2"></div>
+    </section>
+  </section>
+
+  <footer>
+    <br>
+    <hr>
+  </footer>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
